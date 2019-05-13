@@ -135,33 +135,56 @@
 			<div class="col-md-12 text-center animate-box">
 				<div class="wedding-events">
 					<div class="desc">
-
 						<div class="date">
-							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">양재 엘블레스 다이아몬드홀</span>
-							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px; padding:0px;">2018년 9월 1일</span>
-							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px; padding:0px;">토요일 오후 5시</span>
+							<span style="font-size:22px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">마리드블랑 (신라스테이 역삼)</span>							
+							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px; padding:0px;">2019년 6월 29일</span>
+							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px; padding:0px;">토요일 오후 2시</span>
 						</div>
+						<div id="weddingmap" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
 
-						<p style="text-align: left;margin-top: 20px; font-size: 15px;">
-							<span style="color: rgba(0,0,0,0.7)">장소</span><br/>
-							서울특별시 서초구 강남대로 213번지 지하 1층<br/>
-							(서초구 양재동 24번지)
+						<p style="text-align: center;margin-top: 20px; font-size: 15px;">
+							<span style="color: rgba(0,0,0,1)">장소</span><br/>
+							서울특별시 강남구 언주로 517 마리드블랑<br/>
+							(서울특별시 강남구 역삼동 675-3)
 						</p>
-						<p style="text-align: left; font-size: 15px;">
-							<span style="color: rgba(0,0,0,0.7)">지하철</span><br/>
-							3호선 양재역/신분당선 양재역 9번 출구 연결
+						<p style="text-align: center; font-size: 15px;">
+							<span style="color: rgba(0,0,0,1)">지하철 및 도보</span><br/>
+							2호선 역삼역 8번 출구 (도보 700m) <br/> 2호선 선릉역 5번 출구 (도보 700m)
 						</p>
-						<p style="text-align: left; font-size: 15px;">
-							<span style="color: rgba(0,0,0,0.7)">버스</span><br/>
-							양재역, 서초구민회관에서 하차
+						<p style="text-align: center; font-size: 15px;">
+							<span style="color: rgba(0,0,0,1)">버스</span><br/>
+							2호선 선릉역 5번 출구에서 20분 마다 출발(확인필요)
 						</p>
-						<p style="text-align: left; font-size: 15px;">
-							<span style="color: rgba(0,0,0,0.7)">주차장</span><br/>
-							엘블레스 옆  양재역 주차장 이용 - 2시간 무료
-							<br/>
-							(서초구 강남대로 221번지)
+						<p style="text-align: center; font-size: 15px;">
+							<span style="color: rgba(0,0,0,1)">주차장</span><br/>
+							마리드블랑(결혼식장) 지하 주차장 이용 <br/> KT강남지사 골목으로 돌아들어가면 주차장							
 						</p>
-						<div id="map" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
+						<hr style="margin-left:0px">
+						<div class="date">
+							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">포항에서 출발하는 버스</span>
+							<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">2018년 9월 1일</span>
+							<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">토요일 오전 6시</span>
+						</div>
+						<div id="busmap" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
+
+						<p style="text-align: center; font-size: 15px;">
+								<span style="color: rgba(0,0,0,1)">장소</span><br/>
+								경상북도 포항시 남구 지곡로 247 롯데마트 앞<br/>
+								(경상북도 포항시 남구 지곡동 481)
+						</p>
+						
+						<p style="text-align: center; font-size: 15px;">
+								<span style="color: rgba(0,0,0,1)">버스 기사님 연락처</span><br/>
+								☎ 010-1111-1111
+						</p>
+						<hr style="margin-left:0px">
+						<div class="date">
+								<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">수원 출발 버스가 있을 수 있습니다.</span>								
+						</div>
+						<hr style="margin-left:0px">
+						<div class="date">
+							<span style="font-size:15px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">감사하지만 화환은 정중히 사양합니다.</span>							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -303,30 +326,47 @@
 	var map = null;
 
 	function initMap() {
-		map = new naver.maps.Map('map', {
-			center: new naver.maps.LatLng(37.3595704, 127.105399),
-			zoom: 10
-		});
+		map = new naver.maps.Map('weddingmap', {
+			center: new naver.maps.LatLng(37.5033145, 127.042338),
+			zoom: 11
+		});		
 		
-		var marker = new naver.maps.Marker({
-			position: new naver.maps.LatLng(37.3595704, 127.105399),
-			map: map
-		});
-		
-		var markerOptions = {
-			position: position.destinationPoint(90, 15),
+		var weddungMarker = new naver.maps.Marker({
+			position: new naver.maps.LatLng(37.5046345, 127.041238),
 			map: map,
+			title: 'Green',
 			icon: {
-					url: HOME_PATH +'/img/example/sally.png',
-					size: new naver.maps.Size(50, 52),
-					origin: new naver.maps.Point(0, 0),
-					anchor: new naver.maps.Point(25, 26)
-			}
-		};		
-		//var marker = new naver.maps.Marker(markerOptions);
-	}	
-  }
+				content: [
+						'<figure class="marker wedding">',
+							'<img class=wedding-image src="https://image.flaticon.com/icons/svg/1715/1715375.svg">',
+						'</figure>'
+						].join(''),
+				size: new naver.maps.Size(38, 58),
+				anchor: new naver.maps.Point(19, 58),
+			},
+		});
 
+		map = new naver.maps.Map('busmap', {
+			center: new naver.maps.LatLng(36.0283819, 129.324324),
+			zoom: 11
+		});
+
+		var busMarker = new naver.maps.Marker({
+			position: new naver.maps.LatLng(36.0278819, 129.324924),
+			map: map,
+			title: 'Green',
+			icon: {
+				content: [
+						'<figure class="marker bus">',
+							'<img class=bus-image src="https://image.flaticon.com/icons/svg/1168/1168001.svg" alt="My Image">',
+						'</figure>'
+						].join(''),
+				size: new naver.maps.Size(38, 58),
+				anchor: new naver.maps.Point(19, 58),
+			},
+		});
+	}
 </script>
 </body>
 </html>
+

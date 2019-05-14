@@ -1713,7 +1713,7 @@ h1, h2, h3, h4, h5, h6 {
 .wedding-image {
     width: 38px;
     margin-top: 5px;
-    margin-left: 4px;
+    margin-left: -5px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -1721,9 +1721,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bus-image {
-    width: 38px;
-    margin-top: 5px;
-    margin-left: 5px;
+    width: 40px;
+    margin-top: 6px;
+    margin-left: 1px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);

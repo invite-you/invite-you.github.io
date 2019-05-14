@@ -341,11 +341,12 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
+  background-position: 52% 60% !important;
 }
 @media screen and (max-width: 768px) {
   .qbootstrap-cover,
   .video-hero {
-    heifght: inherit;
+    height: inherit;
   }
 }
 .qbootstrap-cover .display-t,
@@ -631,7 +632,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 10px;
   text-transform: uppercase;
   font-size: 14px;
-  border: 1px solid rgba(255, 132, 124, 0.3);
+  /*border: 1px solid rgba(255, 132, 124, 0.3);*/
   padding: 2px 5px;
 }
 #qbootstrap-couple .amp-center {
@@ -658,6 +659,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
+  background-position: 80% 50% !important;
   z-index: 0;
   width: 100%;
 }
@@ -1150,7 +1152,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 400px;
 }
 .wedding-events .desc {
-  padding: 40px;
+  padding: 30px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   position: relative;
   z-index: 0;
@@ -1728,4 +1730,8 @@ h1, h2, h3, h4, h5, h6 {
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+}
+
+*:lang(zh) {
+  font-family: Arial, sans-serif;  
 }

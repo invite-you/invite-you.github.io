@@ -101,14 +101,13 @@
 			<div class="col-md-8 col-md-offset-2 animate-box">
 				<div class="col-md-12 text-center section-heading svg-sm colored">
 					<p style="font-size: 32px; margin-bottom: 20px; color: rgba(0, 0, 0, 0.7)">
-						김경민  김소원
+						김경민&nbsp.&nbsp김소원
 					</p>
 					<p style="font-size: 16px; margin-bottom: 0px;">
 						사내식당에서 살며시 눈빛을 주고받는<br/>
-						풋풋한 연애를 시작하고 어느덧 5년,<br/>
-						
+						풋풋한 연애를 시작하고 어느덧 5년,<br/>						
 						이제 평생을 함께 하기로 약속합니다.<br/>
-						귀한 시간 내어 이 자리에 오셔서<br/> 함께 걷는 첫 걸음을 지켜봐주세요.
+						함께 걷는 첫 걸음을 지켜봐주세요.
 					</p>
 				</div>
 			</div>
@@ -118,8 +117,8 @@
 			<div class="col-md-8 col-md-offset-2 animate-box">
 				<div class="col-md-12 text-center section-heading svg-sm colored">
 					<p style="font-size: 18px; margin-top: 40px; margin-bottom: 20px">
-						<span lang="zh">父</span>김상기와  <span lang="zh">母</span>오희숙의 차남 경민<br/>
-						<span lang="zh">父</span>김종수와  <span lang="zh">母</span>고경심의 장녀 소원
+						김상기ㆍ오희숙의 차남 경민<br/>
+						김종수ㆍ고경심의 장녀 소원
 					</p>
 					
 					<hr style="margin-left:0px">
@@ -140,7 +139,7 @@
 				<div class="wedding-events">
 					<div class="desc">
 						<div class="date">
-							<span style="font-size:22px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">마리드블랑 (신라스테이 역삼)</span>							
+							<span style="font-size:22px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">마리드블랑</span> <span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">(신라스테이 역삼)</span>							
 							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px; padding:0px;">2019년 6월 29일</span>
 							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px; padding:0px;">토요일 오후 2시</span>
 						</div>
@@ -167,20 +166,20 @@
 						</p>
 						<hr style="margin-left:0px;border-top: 1px solid #ddd;">
 						<div class="date">
-							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">포항에서 출발하는 버스</span>
+							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">포항출발 버스</span>
 							<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">2019년 6월 29일 토요일 <br/> 오전 7시 30분</span>							
 						</div>
 						<div id="busmap" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
 
 						<p style="text-align: center; font-size: 15px;">
 								<span style="color: rgba(0,0,0,1)">장소</span><br/>
-								경상북도 포항시 남구 지곡로 247 롯데마트 주차장 근처<br/>
+								포항시 남구 지곡로 247 롯데마트 주차장<br/>
 								(경상북도 포항시 남구 지곡동 481)
 						</p>
 
 						<hr style="margin-left:0px;border-top: 1px solid #ddd;">
 						<div class="date">
-								<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">수원 출발 버스가 있을 수 있습니다.</span>								
+								<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">수원 출발 버스는 2주 전 공지 드리겠습니다.</span>								
 						</div>
 					</div>
 				</div>
@@ -321,12 +320,12 @@
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=nt5w4mks8r"></script>
 <script>	
 	map = new naver.maps.Map('weddingmap', {
-		center: new naver.maps.LatLng(37.5033145, 127.045638),
-		zoom: 10
+		center: new naver.maps.LatLng(37.5038145, 127.045638),
+		zoom: 11
 	});		
 	
 	var weddungMarker = new naver.maps.Marker({
-		position: new naver.maps.LatLng(37.5050000, 127.042638),
+		position: new naver.maps.LatLng(37.5050845, 127.041138),
 		map: map,
 		title: 'Green',
 		icon: {
@@ -339,6 +338,23 @@
 			anchor: new naver.maps.Point(19, 58),
 		},
 	});
+
+	var seuolbusMarker = new naver.maps.Marker({
+		position: new naver.maps.LatLng(37.5044145, 127.047408),
+		map: map,
+		title: 'Green',
+		icon: {
+			content: [
+					'<div class="pin">',
+						'<img class="bus-image" src="https://image.flaticon.com/icons/svg/1168/1168001.svg">',
+					'</div>'
+					].join(''),
+			size: new naver.maps.Size(38, 58),
+			anchor: new naver.maps.Point(19, 58),
+		},
+	});
+
+
 
 	map = new naver.maps.Map('busmap', {
 		center: new naver.maps.LatLng(36.0295019, 129.323494),

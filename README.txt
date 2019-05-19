@@ -57,3 +57,7 @@ http://pupunzi.open-lab.com
 
 Flex Slider
 http://www.woothemes.com/flexslider/
+
+Markers in map, favicon icon
+Icon made by Freepik from www.flaticon.com 
+E.g.: Icon made by Freepik from www.flaticon.com 

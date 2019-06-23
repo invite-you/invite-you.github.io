@@ -169,7 +169,7 @@
 							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">포항출발 버스</span>
 							<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">가람여행사<br/>2019년 6월 29일 토요일 <br/> 오전 7시 30분</span>							
 						</div>
-						<div id="busmap" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
+						<div id="pbusmap" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
 
 						<p style="text-align: center; font-size: 15px;">
 								<span style="color: rgba(0,0,0,1)">장소</span><br/>
@@ -179,8 +179,15 @@
 
 						<hr style="margin-left:0px;border-top: 1px solid #ddd;">
 						<div class="date">
-								<span style="font-size:17px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">수원 출발 버스는 <br/>2주 전 공지 드리겠습니다.</span>								
+							<span style="font-size:20px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">수원출발 버스</span>
+							<span style="font-size:18px; font-family: 'Jeju Myeongjo', serif; letter-spacing:1px;">수원 디지털 시티 중앙문<br/>2019년 6월 29일 토요일 <br/> 오후 12시 20분 출발</span>							
 						</div>
+						<div id="sbusmap" style="height:360px; margin-top: 20px; margin-bottom: 20px;"></div>
+
+						<p style="text-align: center; font-size: 15px;">
+								<span style="color: rgba(0,0,0,1)">장소</span><br/>
+								경기 수원시 영통구 삼성로 129 삼성 디지털시티 중앙문<br/>								
+						</p>
 					</div>
 				</div>
 			</div>
@@ -356,7 +363,7 @@
 
 
 
-	map = new naver.maps.Map('busmap', {
+	map = new naver.maps.Map('pbusmap', {
 		center: new naver.maps.LatLng(36.0287019, 129.323494),
 		zoom: 12
 	});
@@ -368,7 +375,27 @@
 		icon: {
 			content: [
 					'<div class="pin">',
-						'<img class="bus-image" src="images/icon/bus.svg">',
+						'<img class="bus-image" src="https://image.flaticon.com/icons/svg/1168/1168001.svg">',
+					'</div>'
+					].join(''),
+			size: new naver.maps.Size(38, 58),
+			anchor: new naver.maps.Point(19, 58),
+		},
+	});
+
+	map = new naver.maps.Map('sbusmap', {
+		center: new naver.maps.LatLng(37.25791, 127.04782),
+		zoom: 12
+	});
+
+	var busMarker = new naver.maps.Marker({
+		position: new naver.maps.LatLng(37.25738, 127.04936),
+		map: map,
+		title: 'Green',
+		icon: {
+			content: [
+					'<div class="pin">',
+						'<img class="bus-image" src="https://image.flaticon.com/icons/svg/1168/1168001.svg">',
 					'</div>'
 					].join(''),
 			size: new naver.maps.Size(38, 58),
